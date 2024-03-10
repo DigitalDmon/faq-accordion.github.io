@@ -2,47 +2,93 @@
   font-family: work-sans;
   src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
 }
-.container {
-  width: 500px;
-  margin: auto;
+body {
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: hsl(275, 100%, 97%);
+  font-family: work-sans;
+  margin: 0;
 }
-.container .tittle,
-.container .answer {
+body .container {
+  width: 600px;
+  margin: 320px auto 25px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+body .container .svg-start {
+  padding-right: 15px;
+}
+body .container .tittle {
+  font-weight: 700;
+}
+body .container .tittle,
+body .container .answer {
   display: flex;
+  align-items: center;
   padding: 0 25px;
 }
-.container .box {
+body .container .box {
   cursor: pointer;
 }
-.container .box .question {
+body .container .box .question {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 25px;
 }
-.container .box .question .svg-plus svg {
-  transition: transform 1s ease;
+body .container .box .question p {
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
 }
-.container .box .question .svg-minus {
+body .container .box .question p:hover {
+  color: purple;
+}
+body .container .box .question .svg-minus {
   display: none;
 }
-.container .box .answer {
+body .container .box .answer {
   max-height: 0;
   overflow: hidden;
-  border-bottom: 1px solid hsl(292, 16%, 49%);
-  transition: max-height 1s ease;
+  transition: max-height 0.5s ease;
 }
-.container .box.active .answer {
+body .container .box .answer p {
+  color: hsl(292, 16%, 49%);
+}
+body .container .box hr {
+  height: 1px;
+  background-color: hsl(275, 100%, 97%);
+  border: none;
+  width: 90%;
+}
+body .container .box.active .answer {
   max-height: 104px;
 }
-.container .box.active .question .svg-plus svg {
-  transform: rotate(-90deg);
+body .container .box.active .question .svg-plus {
+  display: none;
 }
-
-.attribution {
+body .container .box.active .question .svg-minus {
+  display: block;
+}
+body .attribution {
   font-size: 12px;
   text-align: center;
 }
-.attribution a {
+body .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+  }
+  body .container {
+    max-width: 350px;
+    margin: 100px auto 25px;
+  }
+  body .container .box .question p {
+    width: 320px;
+  }
 }/*# sourceMappingURL=styles.css.map */
