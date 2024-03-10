@@ -36,37 +36,46 @@ $Dark-purple: hsl(292, 42%, 14%);
     width: 500px;
     margin: auto;
     background-color: $Light-pink;
-    
-    .tittle, .answer {
-        display: flex;
-        padding: 0 25px;
-    }
 
-    .question {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 25px;
-        
-    }
-
+    .tittle,
     .answer {
-        max-height: 0;
-        overflow: hidden;
-        border-bottom: 1px solid $Grayish-purple;
-        transition: max-height 1s ease;
+        display: flex;
+        padding: 0 25px;
     }
 
     .box {
         cursor: pointer;
+
+        .question {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+
+            .svg-plus svg {
+                transition: transform 1s ease;
+            }
+
+            .svg-minus {
+                display: none;
+            }
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            border-bottom: 1px solid $Grayish-purple;
+            transition: max-height 1s ease;
+        }
     }
 
     .box.active .answer {
         max-height: 104px;
     }
-    
+
+    .box.active .question .svg-plus svg {
+        transform: rotate(-90deg);
+    }
 }
-
-
 
 .attribution {
     font-size: 12px;
