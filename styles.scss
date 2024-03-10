@@ -47,7 +47,7 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 0 25px;
-                
+
                 p {
                     font-weight: 700;
                     color: $Dark-purple;
@@ -81,7 +81,7 @@ body {
         }
 
         .box.active .answer {
-            max-height: 110px;
+            max-height: 130px;
         }
 
         .box.active .question .svg-plus {
@@ -104,14 +104,16 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    
+
     body {
         background-image: none;
         background-image: url(./assets/images/background-pattern-mobile.svg);
         background-repeat: no-repeat;
+
         .container {
             max-width: 350px;
             margin: 100px auto 25px;
+
             .box .question p {
                 width: 320px;
             }
